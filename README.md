@@ -5,6 +5,15 @@ This project is a mini NLP-based system that analyzes user comments and classifi
 
 ---
 
+### 🚀 Live Demo
+Try the deployed Streamlit application here:
+
+🔗 **https://comment-assistant-dbfd3ahmkkzfzdarwnzcxj.streamlit.app/**
+
+The app allows you to paste any user comment, instantly categorize it (praise, hate, support, spam, etc.), and view an auto-generated suggested reply.
+
+---
+
 ## 🎯 Objectives
 - Categorize user comments based on intent/emotion  
 - Detect praise, support, constructive criticism, hate/abuse, threats, emotional messages, spam, and questions  
