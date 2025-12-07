@@ -10,7 +10,7 @@ This project is a mini NLP-based system that analyzes user comments and classifi
 - Detect praise, support, constructive criticism, hate/abuse, threats, emotional messages, spam, and questions  
 - Auto-generate suitable response templates  
 - Provide an easy-to-use script (CSV → labeled CSV)  
-- (Optional) Offer a Streamlit UI for real-time predictions  
+- Offer a Streamlit UI for real-time predictions  
 
 ---
 
@@ -26,7 +26,7 @@ A custom dataset of **200+ labeled comments** was created, covering:
 - Spam  
 - Question/Suggestion  
 
-File: `data/comments_labeled.csv`
+File: `data/training_data.csv`
 
 ---
 
@@ -56,7 +56,7 @@ python train_model.py
 
 ### 2. Predict categories for new comments
 ```bash
-python predict_comments.py --input ../data/new_comments.csv --output ../data/new_comments_categorized.csv
+python training_data.py --input ../data/test_comments.csv --output ../data/test_comments_categorized.csv
 ```
 
 Output CSV contains:
@@ -78,7 +78,7 @@ Examples:
 
 ---
 
-## 📊 Visualization (Optional)
+## 📊 Visualization
 A category distribution chart is generated as:
 
 ```
@@ -87,14 +87,14 @@ data/category_distribution.png
 
 ---
 
-## 🖥 Optional Streamlit UI
+## 🖥 Streamlit UI
 Run:
 ```bash
 streamlit run app_streamlit.py
 ```
 
 Features:
-- Enter a comment  
+- Enter a comment or select from examples
 - See predicted category  
 - Get auto-generated reply  
 
@@ -104,15 +104,15 @@ Features:
 ```
 comment-assistant/
 ├── data/
-│   ├── new_training_comments.csv
-│   ├── new_comments.csv
+│   ├── test_comments.csv
+│   ├── training_data.csv
 ├── models/
 │   └── comment_clf.joblib
 ├── src/
 │   ├── train_model.py
 │   ├── predict_comments.py
 │   └── utils.py
-├── app_streamlit.py  (optional)
+├── app_streamlit.py
 ├── README.md
 ```
 
