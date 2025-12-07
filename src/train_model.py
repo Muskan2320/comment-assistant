@@ -10,7 +10,7 @@ import os
 
 from utils import preprocess
 
-DATA_PATH = "../data/comments_labeled.csv"
+DATA_PATH = "../data/training_data.csv"
 MODEL_PATH = "../models/comment_clf.joblib"
 
 def main():

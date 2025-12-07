@@ -46,7 +46,7 @@ def predict_and_save(input_path: str, output_path: str):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--input", required=True, help="Path to CSV with a 'comment' column")
-    parser.add_argument("--output", default="../data/comments_categorized.csv")
+    parser.add_argument("--output", default="../data/training_data.csv")
     args = parser.parse_args()
 
     predict_and_save(args.input, args.output)
